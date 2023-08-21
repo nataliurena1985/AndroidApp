@@ -6,15 +6,20 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var txtLabel : TextView
+    private lateinit var btnChange : Button
+
+    private val textToShow = "Soy Claudia"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val txtLabel : TextView = findViewById(R.id.txtLabel)
-        val btnChange : Button = findViewById(R.id.btnChange)
+        txtLabel = findViewById(R.id.txtLabel)
+        btnChange = findViewById(R.id.btnChange)
 
         btnChange.setOnClickListener {
-            txtLabel.text = "Soy Claudia"
+            txtLabel.text = textToShow
         }
     }
 }
